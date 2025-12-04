@@ -1,21 +1,10 @@
-import useDom from "./hooks/useDom";
-import useValidate from "./hooks/useValidate";
+import useDate from "./hooks/useDate";
 
 function main() {
-    const form = useDom("#form");
-    const { validate } = useValidate("#form");
+    const { today, format } = useDate();
 
-    form.on("submit", (e) => {
-        e.preventDefault();
-
-        validate({
-            classError: "error",
-            classValid: "valid",
-            callback: (e) => {
-                console.log(e)
-            }
-        });
-    });
+    console.log(today());
+    console.log(format({date: new Date(2025, 11, 4)}));
 }
 
 main();
