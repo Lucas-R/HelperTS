@@ -1,0 +1,1 @@
+export type RouteListener = (path: string) => void;
