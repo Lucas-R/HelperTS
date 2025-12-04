@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #form .error {
+        border: 1px solid red;
+    }
+
+    #form .valid {
+        border: 1px solid green;
+    }
+</style>
 <body>
-    <input type="text" name="name" id="name">
+    <form id="form">
+        <input type="text" name="name1" data-validate="true">
+        <input type="text" name="name2" data-validate="false">
+        <input type="text" name="name3" data-validate="true">
+        <input type="text" name="name4" data-validate="true">
+        <input type="text" name="name5" data-validate="true">
+        <input type="text" name="name6" data-validate="true">
+        <input type="text" name="name7" data-validate="false">
+        <input type="text" name="name8" data-validate="true">
+        <input type="text" name="name9" data-validate="true">
+
+        <button type="submit">Send</button>
+    </form>
 </body>
 <script src="./dist/main.global.js"></script>
 </html>

@@ -1,11 +1,21 @@
-import useRouter from "./hook/useRouter";
+import useDom from "./hooks/useDom";
+import useValidate from "./hooks/useValidate";
 
 function main() {
-    const router = useRouter();
+    const form = useDom("#form");
+    const { validate } = useValidate("#form");
 
-    router.push("/test");
+    form.on("submit", (e) => {
+        e.preventDefault();
 
-    console.log(router.path)
+        validate({
+            classError: "error",
+            classValid: "valid",
+            callback: (e) => {
+                console.log(e)
+            }
+        });
+    });
 }
 
 main();
