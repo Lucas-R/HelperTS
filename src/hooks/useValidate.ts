@@ -13,6 +13,8 @@ export default function useValidate<T extends HTMLElement>(selector: string) {
         const errors: ErrorsProps[] = [];
         const fields = Array.from(wrapper?.querySelectorAll<InputsProps>('[data-validate="true"]') || []);
 
+        console.log(fields);
+
         if(!fields) throw new Error("Nenhum campo foi encontrado.");
 
         fields.forEach((field) => {

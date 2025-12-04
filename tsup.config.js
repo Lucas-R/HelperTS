@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: ['src/main.ts'],
-  outDir: './dist',
+  outDir: './dist/js',
   platform: 'browser',
   format: ['iife'],
   splitting: false,
