@@ -1,0 +1,4 @@
+$w-sm: toRem(480);   /* Small – smartphones */
+$w-md: toRem(768);   /* Medium – tablets */
+$w-lg: toRem(1024);  /* Large – laptops / desktops pequenos */
+$w-xl: toRem(1200);  /* Extra Large – desktops grandes */

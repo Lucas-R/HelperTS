@@ -1,1 +1,3 @@
+@import './variables/all.css';
 @import './global/resets.css';
+@import './components/all.css';

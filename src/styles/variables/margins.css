@@ -1,0 +1,6 @@
+$margin-xs: toRem(4);   /* 4px */  
+$margin-sm: toRem(8);   /* 8px */  
+$margin-md: toRem(16);  /* 16px */  
+$margin-lg: toRem(24);  /* 24px */  
+$margin-xl: toRem(32);  /* 32px */  
+$margin-xxl: toRem(48); /* 48px */  

@@ -3,63 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/main.css">
     <title>Document</title>
 </head>
-<style>
-    #form .error {
-        border: 1px solid red;
-    }
-
-    #form .valid {
-        border: 1px solid green;
-    }
-
-    #form .disabled {
-        pointer-events: none;
-        opacity: .5;
-    }
-</style>
 <body>
     <form id="form">
-        <input type="text" name="name1" data-validate="true">
-        <input type="text" name="name2" data-validate="false">
-        <input type="text" name="name3" data-validate="true">
-        <input type="text" name="name4" data-validate="true">
-        <input type="text" name="name5" data-validate="true">
-        <input type="text" name="name6" data-validate="true">
-        <input type="text" name="name7" data-validate="false">
-        <input type="text" name="name8" data-validate="true">
-        <input type="text" name="name9" data-validate="true">
-
-        <select id="select" data-validate="true">
-            <option value="">None</option>
-            <option value="1">Opção 1</option>
-            <option value="2">Opção 2</option>
-            <option value="3">Opção 3</option>
-            <option value="4">Opção 4</option>
-            <option value="5">Opção 5</option>
-            <option value="6">Opção 6</option>
-            <option value="7">Opção 7</option>
-            <option value="8">Opção 8</option>
-            <option value="9">Opção 9</option>
-            <option value="10">Opção 10</option>
-        </select>
-
-        <select id="select2" class="disabled" data-validate="false">
-            <option value="">None</option>
-            <option value="1">Opção 1</option>
-            <option value="2">Opção 2</option>
-            <option value="3">Opção 3</option>
-            <option value="4">Opção 4</option>
-            <option value="5">Opção 5</option>
-            <option value="6">Opção 6</option>
-            <option value="7">Opção 7</option>
-            <option value="8">Opção 8</option>
-            <option value="9">Opção 9</option>
-            <option value="10">Opção 10</option>
-        </select>
-
-        <button type="submit">Send</button>
+        <div class="container">
+            <input type="text" name="name1" data-validate="true">
+            <input type="text" name="name2" data-validate="false">
+            <input type="text" name="name3" data-validate="true">
+            <input type="text" name="name4" data-validate="true">
+            <input type="text" name="name5" data-validate="true">
+            <input type="text" name="name6" data-validate="true">
+            <input type="text" name="name7" data-validate="false">
+            <input type="text" name="name8" data-validate="true">
+            <input type="text" name="name9" data-validate="true">
+            
+            <select id="select" data-validate="true">
+                <option value="">None</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+                <option value="3">Opção 3</option>
+                <option value="4">Opção 4</option>
+                <option value="5">Opção 5</option>
+                <option value="6">Opção 6</option>
+                <option value="7">Opção 7</option>
+                <option value="8">Opção 8</option>
+                <option value="9">Opção 9</option>
+                <option value="10">Opção 10</option>
+            </select>
+            
+            <select id="select2" class="disabled" data-validate="false">
+                <option value="">None</option>
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+                <option value="3">Opção 3</option>
+                <option value="4">Opção 4</option>
+                <option value="5">Opção 5</option>
+                <option value="6">Opção 6</option>
+                <option value="7">Opção 7</option>
+                <option value="8">Opção 8</option>
+                <option value="9">Opção 9</option>
+                <option value="10">Opção 10</option>
+            </select>
+            
+            <button type="submit">Send</button>
+        </div>
     </form>
 </body>
 <script src="./dist/main.global.js"></script>

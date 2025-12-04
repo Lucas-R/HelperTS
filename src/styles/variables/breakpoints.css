@@ -1,0 +1,5 @@
+/* Breakpoints / Responsividade */
+$breakpoint-sm: toRem(480);   /* Small – smartphones (480px) */
+$breakpoint-md: toRem(768);   /* Medium – tablets (768px) */
+$breakpoint-lg: toRem(1024);  /* Large – laptops / desktops pequenos (1024px) */
+$breakpoint-xl: toRem(1200);  /* Extra Large – desktops grandes (1200px) */

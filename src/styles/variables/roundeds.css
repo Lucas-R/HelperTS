@@ -1,0 +1,4 @@
+$rounded-sm: toRem(4);       /* 4px */
+$rounded-md: toRem(8);       /* 8px */
+$rounded-lg: toRem(16);      /* 16px */
+$rounded-full: toRem(9999);  /* valor fixo circular */

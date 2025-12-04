@@ -1,0 +1,27 @@
+/* Cores principais */
+$primaria: #005596;       /* Azul Murano – principal para botões, links e destaques */
+$secundaria: #00B1B0;     /* Turquoise Blue – para destaques secundários, ícones */
+
+/* Cores de suporte / UI */
+$surface: #8094b2;        /* Cobalt Blue 50 – fundo de cards, seções */
+$surface-light: #c0cbe0;  /* Tom mais claro para sobreposições */
+$surface-dark: #3a6aa0;   /* Tom mais escuro para hover ou bordas internas */
+
+$border: #8094b2;          /* Azul claro para bordas, dividers */
+$border-light: #c0cbe0;    /* Versão suave */
+$border-dark: #005596;     /* Versão mais intensa */
+
+/* Feedback / status */
+$success: #00A69E;         /* Verde Berilo – sucesso, confirmações */
+$error: #d9534f;           /* Vermelho alerta (exemplo) */
+$warning: #f0ad4e;         /* Amarelo alerta */
+$info: #00B1B0;            /* Azul Turquesa – informativo */
+
+/* Tipografia */
+$text-primary: #005596;    /* Azul Murano – textos principais */
+$text-secondary: #8094b2;  /* Azul claro – textos secundários */
+$text-on-surface: #ffffff; /* Textos sobre backgrounds escuros */
+
+/* Outros elementos */
+$shadow: rgba(0, 0, 0, 0.1);   /* Sombra leve para cards */
+$overlay: rgba(0, 0, 0, 0.5);  /* Para modais ou sobreposições */

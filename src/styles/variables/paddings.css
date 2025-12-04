@@ -1,0 +1,6 @@
+$padding-xs: toRem(4);    /* 4px */
+$padding-sm: toRem(8);    /* 8px */
+$padding-md: toRem(16);   /* 16px */
+$padding-lg: toRem(24);   /* 24px */
+$padding-xl: toRem(32);   /* 32px */
+$padding-xxl: toRem(48);  /* 48px */
