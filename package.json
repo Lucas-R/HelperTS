@@ -4,9 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "tsup": "tsup",
-    "build:css": "postcss src/styles.css -o dist/styles.css",
-    "watch:css": "postcss src/styles/main.css -o dist/css/main.css --watch"
+    "watch:tsup": "tsup  --watch",
+    "build:tsup": "tsup",
+    "build:css": "postcss src/styles/main.css -o dist/css/main.css",
+    "watch:css": "postcss src/styles/main.css -o dist/css/main.css --watch",
+    "build": "npm run build:tsup && npm run build:css"
   },
   "keywords": [],
   "author": "",

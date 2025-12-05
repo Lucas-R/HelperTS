@@ -1,4 +1,4 @@
-import type UseDateProps from "@/types/useDateProps";
+import type { UseDateProps } from "@/types/UseDateProps";
 
 export default function useDate() {
     function today({ locale = "pt-BR", payload }: UseDateProps = {}) {

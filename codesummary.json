@@ -1,0 +1,496 @@
+{
+  "rootDirectory": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS",
+  "timestamp": "2025-12-05T12:59:48.886Z",
+  "files": [
+    {
+      "path": ".gitignore",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\.gitignore",
+      "name": ".gitignore",
+      "extension": "",
+      "size": 20,
+      "created": "2025-12-04T11:44:11.208Z",
+      "modified": "2025-12-04T14:07:25.591Z",
+      "content": "node_modules/\r\ndist/",
+      "lines": 2,
+      "isText": false
+    },
+    {
+      "path": "index.html",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\index.html",
+      "name": "index.html",
+      "extension": ".html",
+      "size": 2447,
+      "created": "2025-12-04T12:03:43.475Z",
+      "modified": "2025-12-04T20:53:33.997Z",
+      "content": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <link rel=\"stylesheet\" href=\"./dist/css/main.css\">\r\n    <title>Document</title>\r\n</head>\r\n<body>\r\n    <form id=\"form\">\r\n        <div class=\"container\">\r\n            <input type=\"text\" name=\"name1\" data-validate=\"true\">\r\n            <input type=\"text\" name=\"name2\" data-validate=\"false\">\r\n            <input type=\"text\" name=\"name3\" data-validate=\"true\">\r\n            <input type=\"text\" name=\"name4\" data-validate=\"true\">\r\n            <input type=\"text\" name=\"name5\" data-validate=\"true\">\r\n            <input type=\"text\" name=\"name6\" data-validate=\"true\">\r\n            <input type=\"text\" name=\"name7\" data-validate=\"false\">\r\n            <input type=\"text\" name=\"name8\" data-validate=\"true\">\r\n            <input type=\"text\" name=\"name9\" data-validate=\"true\">\r\n            \r\n            <select id=\"select\" data-validate=\"true\">\r\n                <option value=\"\">None</option>\r\n                <option value=\"1\">Opção 1</option>\r\n                <option value=\"2\">Opção 2</option>\r\n                <option value=\"3\">Opção 3</option>\r\n                <option value=\"4\">Opção 4</option>\r\n                <option value=\"5\">Opção 5</option>\r\n                <option value=\"6\">Opção 6</option>\r\n                <option value=\"7\">Opção 7</option>\r\n                <option value=\"8\">Opção 8</option>\r\n                <option value=\"9\">Opção 9</option>\r\n                <option value=\"10\">Opção 10</option>\r\n            </select>\r\n            \r\n            <select id=\"select2\" class=\"disabled\" data-validate=\"false\">\r\n                <option value=\"\">None</option>\r\n                <option value=\"1\">Opção 1</option>\r\n                <option value=\"2\">Opção 2</option>\r\n                <option value=\"3\">Opção 3</option>\r\n                <option value=\"4\">Opção 4</option>\r\n                <option value=\"5\">Opção 5</option>\r\n                <option value=\"6\">Opção 6</option>\r\n                <option value=\"7\">Opção 7</option>\r\n                <option value=\"8\">Opção 8</option>\r\n                <option value=\"9\">Opção 9</option>\r\n                <option value=\"10\">Opção 10</option>\r\n            </select>\r\n            \r\n            <button type=\"submit\">Send</button>\r\n        </div>\r\n    </form>\r\n</body>\r\n<script src=\"./dist/main.global.js\"></script>\r\n</html>",
+      "lines": 55,
+      "isText": true
+    },
+    {
+      "path": "package.json",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\package.json",
+      "name": "package.json",
+      "extension": ".json",
+      "size": 809,
+      "created": "2025-12-04T11:37:58.967Z",
+      "modified": "2025-12-05T12:42:28.032Z",
+      "content": "{\n  \"name\": \"xyz\",\n  \"version\": \"1.0.0\",\n  \"main\": \"index.js\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"watch:tsup\": \"tsup  --watch\",\n    \"build:tsup\": \"tsup\",\n    \"build:css\": \"postcss src/styles/main.css -o dist/css/main.css\",\n    \"watch:css\": \"postcss src/styles/main.css -o dist/css/main.css --watch\",\n    \"build\": \"npm run build:tsup && npm run build:css\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"description\": \"\",\n  \"devDependencies\": {\n    \"autoprefixer\": \"^10.4.22\",\n    \"cssnano\": \"^7.1.2\",\n    \"postcss\": \"^8.5.6\",\n    \"postcss-cli\": \"^11.0.1\",\n    \"postcss-discard-comments\": \"^7.0.5\",\n    \"postcss-functions\": \"^4.0.2\",\n    \"postcss-import\": \"^16.1.1\",\n    \"postcss-nested\": \"^7.0.2\",\n    \"postcss-simple-vars\": \"^7.0.1\",\n    \"tsup\": \"^8.5.1\",\n    \"typescript\": \"^5.9.3\"\n  }\n}\n",
+      "lines": 31,
+      "isText": true
+    },
+    {
+      "path": "postcss.config.js",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\postcss.config.js",
+      "name": "postcss.config.js",
+      "extension": ".js",
+      "size": 749,
+      "created": "2025-12-04T19:04:39.960Z",
+      "modified": "2025-12-04T20:56:58.296Z",
+      "content": "import path from 'path';\r\nimport cssnano from 'cssnano';\r\nimport nested from 'postcss-nested';\r\nimport autoprefixer from 'autoprefixer';\r\nimport postcssImport from 'postcss-import';\r\nimport postcssFunctions from 'postcss-functions';\r\nimport postcssSimpleVars from 'postcss-simple-vars';\r\nimport postcssDiscardComments from 'postcss-discard-comments';\r\n\r\nimport functions from './src/styles/functions/index.js';\r\n\r\nexport default {\r\n  plugins: [\r\n    postcssImport({ path: [path.resolve('./src/styles/')] }),\r\n    postcssDiscardComments({ removeAll: true }),\r\n    postcssFunctions({ functions }),\r\n    cssnano({ preset: 'default' }),\r\n    postcssSimpleVars(),\r\n    autoprefixer(),\r\n    nested(),\r\n  ],\r\n  map: { inline: true, annotation: true }\r\n};\r\n",
+      "lines": 24,
+      "isText": true
+    },
+    {
+      "path": "src\\constants\\env.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\constants\\env.ts",
+      "name": "env.ts",
+      "extension": ".ts",
+      "size": 151,
+      "created": "2025-12-04T12:18:06.970Z",
+      "modified": "2025-12-04T12:21:21.467Z",
+      "content": "import type { EnvProps } from \"@/types/EnvProps\";\r\n\r\nconst env: EnvProps = {\r\n    api: \"https://jsonplaceholder.typicode.com\"\r\n}\r\n\r\nexport default env;",
+      "lines": 7,
+      "isText": true
+    },
+    {
+      "path": "src\\constants\\states.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\constants\\states.ts",
+      "name": "states.ts",
+      "extension": ".ts",
+      "size": 77,
+      "created": "2025-12-04T14:13:02.145Z",
+      "modified": "2025-12-04T14:14:12.259Z",
+      "content": "const states = {\r\n    initial: 0,\r\n    final: 10\r\n}\r\n\r\nexport default states;",
+      "lines": 6,
+      "isText": true
+    },
+    {
+      "path": "src\\hooks\\useDate.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks\\useDate.ts",
+      "name": "useDate.ts",
+      "extension": ".ts",
+      "size": 752,
+      "created": "2025-12-04T17:25:32.085Z",
+      "modified": "2025-12-05T12:51:20.594Z",
+      "content": "import type { UseDateProps } from \"@/types/UseDateProps\";\r\n\r\nexport default function useDate() {\r\n    function today({ locale = \"pt-BR\", payload }: UseDateProps = {}) {\r\n        let options = payload ?? { day: \"2-digit\", month: \"2-digit\", year: \"2-digit\" };\r\n\r\n        return new Date().toLocaleDateString(locale, options)\r\n    }\r\n\r\n    function format({ date, locale = \"pt-BR\", payload }: UseDateProps = {}): string {\r\n        if (!date) throw new Error(`invalid date: ${date}`);\r\n\r\n        const options: Intl.DateTimeFormatOptions = payload ?? {\r\n            day: \"2-digit\",\r\n            month: \"2-digit\",\r\n            year: \"2-digit\",\r\n        };\r\n\r\n        return date.toLocaleDateString(locale, options);\r\n    }\r\n\r\n    return { today, format }\r\n}",
+      "lines": 23,
+      "isText": true
+    },
+    {
+      "path": "src\\hooks\\useDom.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks\\useDom.ts",
+      "name": "useDom.ts",
+      "extension": ".ts",
+      "size": 968,
+      "created": "2025-12-04T13:25:40.575Z",
+      "modified": "2025-12-05T12:50:45.203Z",
+      "content": "import type { UseDomProps } from \"@/types/UseDomProps\";\r\n\r\nexport default function useDom<T extends HTMLElement>(selector: string): UseDomProps<T> {\r\n    const ref: UseDomProps<T> = {\r\n        current: null,\r\n\r\n        set(selector: string | T) {\r\n            if(typeof selector === \"string\") {\r\n                const element = document.querySelector<T>(selector);\r\n    \r\n                if(!element) throw new Error(`${selector} not found.`);\r\n    \r\n                this.current = element;\r\n            } else {\r\n                this.current = selector;\r\n            }\r\n        },\r\n\r\n        on(type, handler) {\r\n            if(!this.current) return;\r\n            this.current.addEventListener(type, handler as EventListener);\r\n        },\r\n\r\n        off(type, handler) {\r\n            if(!this.current) return;\r\n            this.current.removeEventListener(type, handler as EventListener);\r\n        }\r\n    }\r\n\r\n    if(selector) ref.set(selector);\r\n\r\n    return ref;\r\n}",
+      "lines": 33,
+      "isText": true
+    },
+    {
+      "path": "src\\hooks\\useFetch.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks\\useFetch.ts",
+      "name": "useFetch.ts",
+      "extension": ".ts",
+      "size": 1767,
+      "created": "2025-12-04T12:06:34.717Z",
+      "modified": "2025-12-04T13:20:32.719Z",
+      "content": "import env from \"@/constants/env\";\r\nimport type { CacheItem, UserFetchProps, UserFetchResponseProps } from \"@/types/UseFetchProps\";\r\n\r\nconst cache = new Map<string, CacheItem<any>>();\r\n\r\nexport async function useFetch<T = any>(input: string | UserFetchProps): Promise<UserFetchResponseProps<T>> {\r\n    let data  = null;\r\n    let error = null;\r\n    let payload = {\r\n        endpoint: input,\r\n        method: \"GET\",\r\n        headers: { \"Content-Type\": \"application/json\" },\r\n        body: undefined\r\n    } as UserFetchProps;\r\n\r\n    if(typeof input !== \"string\") payload = {...payload, ...input};\r\n\r\n    if(!payload.endpoint) return { data: null, error: \"invalid endpoint\" };\r\n\r\n    const cacheKey = `${payload.method}:${payload.endpoint}`;\r\n    \r\n    if (payload.method?.toUpperCase() === \"GET\" && cache.has(cacheKey)) {\r\n        const cached = cache.get(cacheKey)!;\r\n\r\n        if (Date.now() - cached.timestamp < 5 * 60 * 1000) {\r\n            return cached.result;\r\n        } else {\r\n            cache.delete(cacheKey);\r\n        }\r\n    }\r\n\r\n    try {\r\n        const options: RequestInit = {\r\n            method: payload.method!.toUpperCase(),\r\n            headers: payload.headers,\r\n        };\r\n\r\n        if (payload.body) {\r\n            options.body = typeof payload.body === \"string\" ? payload.body : JSON.stringify(payload.body);\r\n        }\r\n\r\n        const response = await fetch(env.api + payload.endpoint, options);\r\n        data = await response.json();\r\n    } catch (err) {\r\n        error = err;\r\n        throw new Error(`Erro: ${err}`);\r\n    }\r\n\r\n    const result: UserFetchResponseProps<T> = { data, error };\r\n\r\n    if(payload.method?.toUpperCase() === \"GET\") {\r\n        cache.set(cacheKey, { result, timestamp: Date.now() });\r\n    }\r\n\r\n    return result;\r\n}",
+      "lines": 56,
+      "isText": true
+    },
+    {
+      "path": "src\\hooks\\useRouter.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks\\useRouter.ts",
+      "name": "useRouter.ts",
+      "extension": ".ts",
+      "size": 1059,
+      "created": "2025-12-04T13:49:08.233Z",
+      "modified": "2025-12-04T14:03:31.950Z",
+      "content": "import type { RouteListener } from \"@/types/UseRouterProps\";\r\n\r\nexport default function useRouter() {\r\n    let current = window.location.pathname;\r\n    const listeners = new Set<RouteListener>();\r\n\r\n    function notify(path: string) {\r\n        listeners.forEach((listener) => listener(path));\r\n    }\r\n\r\n    function push(path: string) {\r\n        window.history.pushState({}, \"\", path);\r\n\r\n        current = path;\r\n\r\n        notify(current);\r\n    }\r\n\r\n    function replace(path: string) {\r\n        if(path === current) return;\r\n\r\n        window.history.replaceState({}, \"\", path);\r\n\r\n        current = path;\r\n\r\n        notify(current);\r\n    }\r\n\r\n    function onChange(listener: RouteListener) {\r\n        listeners.add(listener);\r\n\r\n        return () => listeners.delete(listener);\r\n    }\r\n\r\n    window.addEventListener(\"popstate\", () => {\r\n        current = window.location.pathname;\r\n\r\n        notify(current);\r\n    });\r\n\r\n    return {\r\n        get path() {\r\n            return current;\r\n        },\r\n        push,\r\n        replace,\r\n        onChange\r\n    }\r\n}",
+      "lines": 49,
+      "isText": true
+    },
+    {
+      "path": "src\\hooks\\useSelect.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks\\useSelect.ts",
+      "name": "useSelect.ts",
+      "extension": ".ts",
+      "size": 530,
+      "created": "2025-12-04T18:28:03.035Z",
+      "modified": "2025-12-04T18:53:17.884Z",
+      "content": "export default function useSelect(selectID: string) {\r\n    const current = document.querySelector<HTMLSelectElement>(selectID);\r\n    if(!current) throw new Error(`selector: ${selectID} not found.`);\r\n\r\n    function handle(selector: string, callback: (e: HTMLSelectElement) => void) {\r\n        const select = document.querySelector<HTMLSelectElement>(selector);\r\n        if(!select) throw new Error(`selector: ${selectID} not found.`);\r\n        callback(select);\r\n        return select;\r\n    }\r\n\r\n    return { current, handle };\r\n}",
+      "lines": 13,
+      "isText": true
+    },
+    {
+      "path": "src\\hooks\\useStorage.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks\\useStorage.ts",
+      "name": "useStorage.ts",
+      "extension": ".ts",
+      "size": 742,
+      "created": "2025-12-04T11:53:59.044Z",
+      "modified": "2025-12-04T12:03:15.458Z",
+      "content": "export default function useStorage() {\r\n    const get = (key: string) => {\r\n        try {\r\n            const data = localStorage.getItem(key);\r\n            return data ? JSON.parse(data) : null;\r\n        } catch (error) {\r\n            console.warn(`Erro ao ler localStorage para a chave \"${key}\":`, error);\r\n            return null;\r\n        }\r\n    }\r\n\r\n    const set = (key: string, value: Object): boolean => {\r\n        try {\r\n            const data = JSON.stringify(value);\r\n            localStorage.setItem(key, data);\r\n            return true;\r\n        } catch (error) {\r\n            console.warn(`Erro ao salvar no localStorage para a chave \"${key}\":`, error);\r\n            return false;\r\n        }\r\n    }\r\n\r\n    return { get, set };\r\n}",
+      "lines": 24,
+      "isText": true
+    },
+    {
+      "path": "src\\hooks\\useValidate.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks\\useValidate.ts",
+      "name": "useValidate.ts",
+      "extension": ".ts",
+      "size": 1544,
+      "created": "2025-12-04T14:18:52.961Z",
+      "modified": "2025-12-04T18:37:17.150Z",
+      "content": "import type { ErrorsProps, ValidateReturnProps, InputsProps, ValidateProps } from \"@/types/UseValidateProps\";\r\n\r\nfunction removeClass(element: HTMLElement, classname?: string) {\r\n    if(!classname) return;\r\n    \r\n    element.classList.remove(classname)\r\n}\r\n\r\nexport default function useValidate<T extends HTMLElement>(selector: string) {\r\n    const wrapper = document.querySelector<T>(selector);\r\n\r\n    function validate(options?: ValidateProps): ValidateReturnProps {\r\n        const errors: ErrorsProps[] = [];\r\n        const fields = Array.from(wrapper?.querySelectorAll<InputsProps>('[data-validate=\"true\"]') || []);\r\n\r\n        console.log(fields);\r\n\r\n        if(!fields) throw new Error(\"Nenhum campo foi encontrado.\");\r\n\r\n        fields.forEach((field) => {\r\n            const value = field.value.trim();\r\n\r\n            removeClass(field, options?.classError);\r\n            removeClass(field, options?.classValid);\r\n\r\n            if(!value) {\r\n                errors.push({ field: field.name || \"unknown\", message: \"Campo obrigatório.\" });\r\n                options?.classError && field.classList.add(options.classError);\r\n                field.addEventListener(\"input\", () => removeClass(field, options?.classError));\r\n                return;\r\n            }\r\n\r\n            options?.classValid && field.classList.add(options.classValid);\r\n        });\r\n\r\n        const result = { valid: errors.length === 0, errors };\r\n\r\n        if(options?.callback) options.callback(result);\r\n\r\n        return result;\r\n    }\r\n\r\n    return { validate };\r\n}",
+      "lines": 44,
+      "isText": true
+    },
+    {
+      "path": "src\\main.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\main.ts",
+      "name": "main.ts",
+      "extension": ".ts",
+      "size": 1088,
+      "created": "2025-12-04T11:44:42.893Z",
+      "modified": "2025-12-04T19:01:53.156Z",
+      "content": "import select from \"./hooks/useSelect\";\r\nimport useDom from \"./hooks/useDom\";\r\nimport useValidate from \"./hooks/useValidate\";\r\nimport useSelect from \"./hooks/useSelect\";\r\n\r\nfunction main() {\r\n    const form = useDom(\"#form\");\r\n    const { validate } = useValidate(\"#form\");\r\n\r\n    const { current, handle } = useSelect(\"#select\");\r\n\r\n    handle(\"#select2\", (select) => {\r\n        current.addEventListener(\"change\", (e) => {\r\n            const target = e.target as HTMLSelectElement;\r\n            \r\n            select.value = \"\";\r\n            select.classList.remove(\"error\");\r\n\r\n            if(target.value) {\r\n                select.classList.remove(\"disabled\");\r\n                select.setAttribute(\"data-validate\", \"true\");\r\n            } else {\r\n                select.classList.add(\"disabled\");\r\n                select.setAttribute(\"data-validate\", \"false\");\r\n            }\r\n        });\r\n    });\r\n\r\n    form.on(\"submit\", (e) => {\r\n        e.preventDefault();\r\n\r\n        validate({\r\n            classError: \"error\",\r\n            classValid: \"valid\"\r\n        });\r\n    });\r\n}\r\n\r\nmain();",
+      "lines": 39,
+      "isText": true
+    },
+    {
+      "path": "src\\mock\\user.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\mock\\user.ts",
+      "name": "user.ts",
+      "extension": ".ts",
+      "size": 493,
+      "created": "2025-12-04T12:02:02.758Z",
+      "modified": "2025-12-04T12:02:14.017Z",
+      "content": "export const user = {\r\n    id: \"123456\",\r\n    name: \"Lucas Bezerra\",\r\n    email: \"lucas.bezerra@example.com\",\r\n    username: \"lucasb\",\r\n    dateOfBirth: \"1990-05-15\",\r\n    address: {\r\n        street: \"Rua das Flores\",\r\n        number: 123,\r\n        city: \"São Paulo\",\r\n        state: \"SP\",\r\n        zip: \"01234-567\"\r\n    },\r\n    phone: \"+55 11 91234-5678\",\r\n    isActive: true,\r\n    preferences: {\r\n        theme: \"dark\",\r\n        notifications: true\r\n    },\r\n    roles: [\"user\", \"admin\"]\r\n};",
+      "lines": 21,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\components\\all.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\components\\all.css",
+      "name": "all.css",
+      "extension": ".css",
+      "size": 26,
+      "created": "2025-12-04T20:45:49.110Z",
+      "modified": "2025-12-04T20:46:07.479Z",
+      "content": "@import './container.css';",
+      "lines": 1,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\components\\container.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\components\\container.css",
+      "name": "container.css",
+      "extension": ".css",
+      "size": 77,
+      "created": "2025-12-04T19:40:12.919Z",
+      "modified": "2025-12-04T20:44:03.829Z",
+      "content": ".container {\r\n    width: 100%;\r\n    max-width: $w-sm;\r\n    margin: 0 auto;\r\n}",
+      "lines": 5,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\functions\\index.js",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\functions\\index.js",
+      "name": "index.js",
+      "extension": ".js",
+      "size": 89,
+      "created": "2025-12-04T19:35:06.015Z",
+      "modified": "2025-12-04T19:37:46.934Z",
+      "content": "const functions = {\r\n  toRem: (px) => `${px / 16}rem`,\r\n};\r\n\r\nexport default functions;\r\n",
+      "lines": 6,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\global\\resets.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\global\\resets.css",
+      "name": "resets.css",
+      "extension": ".css",
+      "size": 68,
+      "created": "2025-12-04T19:21:58.677Z",
+      "modified": "2025-12-04T20:14:58.825Z",
+      "content": "* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}",
+      "lines": 5,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\main.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\main.css",
+      "name": "main.css",
+      "extension": ".css",
+      "size": 95,
+      "created": "2025-12-04T19:07:54.930Z",
+      "modified": "2025-12-04T20:46:17.760Z",
+      "content": "@import './variables/all.css';\r\n@import './global/resets.css';\r\n@import './components/all.css';",
+      "lines": 3,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\variables\\all.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables\\all.css",
+      "name": "all.css",
+      "extension": ".css",
+      "size": 138,
+      "created": "2025-12-04T20:13:43.967Z",
+      "modified": "2025-12-04T20:39:09.585Z",
+      "content": "@import './breakpoints';\r\n@import './max-widths';\r\n@import './roundeds';\r\n@import './colors';\r\n@import './paddings';\r\n@import './margins';",
+      "lines": 6,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\variables\\breakpoints.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables\\breakpoints.css",
+      "name": "breakpoints.css",
+      "extension": ".css",
+      "size": 330,
+      "created": "2025-12-04T20:03:41.568Z",
+      "modified": "2025-12-04T20:40:41.209Z",
+      "content": "/* Breakpoints / Responsividade */\r\n$breakpoint-sm: toRem(480);   /* Small – smartphones (480px) */\r\n$breakpoint-md: toRem(768);   /* Medium – tablets (768px) */\r\n$breakpoint-lg: toRem(1024);  /* Large – laptops / desktops pequenos (1024px) */\r\n$breakpoint-xl: toRem(1200);  /* Extra Large – desktops grandes (1200px) */\r\n",
+      "lines": 6,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\variables\\colors.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables\\colors.css",
+      "name": "colors.css",
+      "extension": ".css",
+      "size": 1287,
+      "created": "2025-12-04T20:21:47.705Z",
+      "modified": "2025-12-04T20:24:47.822Z",
+      "content": "/* Cores principais */\r\n$primaria: #005596;       /* Azul Murano – principal para botões, links e destaques */\r\n$secundaria: #00B1B0;     /* Turquoise Blue – para destaques secundários, ícones */\r\n\r\n/* Cores de suporte / UI */\r\n$surface: #8094b2;        /* Cobalt Blue 50 – fundo de cards, seções */\r\n$surface-light: #c0cbe0;  /* Tom mais claro para sobreposições */\r\n$surface-dark: #3a6aa0;   /* Tom mais escuro para hover ou bordas internas */\r\n\r\n$border: #8094b2;          /* Azul claro para bordas, dividers */\r\n$border-light: #c0cbe0;    /* Versão suave */\r\n$border-dark: #005596;     /* Versão mais intensa */\r\n\r\n/* Feedback / status */\r\n$success: #00A69E;         /* Verde Berilo – sucesso, confirmações */\r\n$error: #d9534f;           /* Vermelho alerta (exemplo) */\r\n$warning: #f0ad4e;         /* Amarelo alerta */\r\n$info: #00B1B0;            /* Azul Turquesa – informativo */\r\n\r\n/* Tipografia */\r\n$text-primary: #005596;    /* Azul Murano – textos principais */\r\n$text-secondary: #8094b2;  /* Azul claro – textos secundários */\r\n$text-on-surface: #ffffff; /* Textos sobre backgrounds escuros */\r\n\r\n/* Outros elementos */\r\n$shadow: rgba(0, 0, 0, 0.1);   /* Sombra leve para cards */\r\n$overlay: rgba(0, 0, 0, 0.5);  /* Para modais ou sobreposições */\r\n",
+      "lines": 28,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\variables\\margins.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables\\margins.css",
+      "name": "margins.css",
+      "extension": ".css",
+      "size": 224,
+      "created": "2025-12-04T20:38:28.579Z",
+      "modified": "2025-12-04T20:38:53.721Z",
+      "content": "$margin-xs: toRem(4);   /* 4px */  \r\n$margin-sm: toRem(8);   /* 8px */  \r\n$margin-md: toRem(16);  /* 16px */  \r\n$margin-lg: toRem(24);  /* 24px */  \r\n$margin-xl: toRem(32);  /* 32px */  \r\n$margin-xxl: toRem(48); /* 48px */  ",
+      "lines": 6,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\variables\\max-widths.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables\\max-widths.css",
+      "name": "max-widths.css",
+      "extension": ".css",
+      "size": 224,
+      "created": "2025-12-04T20:29:19.331Z",
+      "modified": "2025-12-04T20:43:06.275Z",
+      "content": "$w-sm: toRem(480);   /* Small – smartphones */\r\n$w-md: toRem(768);   /* Medium – tablets */\r\n$w-lg: toRem(1024);  /* Large – laptops / desktops pequenos */\r\n$w-xl: toRem(1200);  /* Extra Large – desktops grandes */\r\n",
+      "lines": 5,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\variables\\paddings.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables\\paddings.css",
+      "name": "paddings.css",
+      "extension": ".css",
+      "size": 224,
+      "created": "2025-12-04T20:37:23.435Z",
+      "modified": "2025-12-04T20:37:29.867Z",
+      "content": "$padding-xs: toRem(4);    /* 4px */\r\n$padding-sm: toRem(8);    /* 8px */\r\n$padding-md: toRem(16);   /* 16px */\r\n$padding-lg: toRem(24);   /* 24px */\r\n$padding-xl: toRem(32);   /* 32px */\r\n$padding-xxl: toRem(48);  /* 48px */",
+      "lines": 6,
+      "isText": true
+    },
+    {
+      "path": "src\\styles\\variables\\roundeds.css",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables\\roundeds.css",
+      "name": "roundeds.css",
+      "extension": ".css",
+      "size": 175,
+      "created": "2025-12-04T20:12:53.763Z",
+      "modified": "2025-12-04T20:37:01.760Z",
+      "content": "$rounded-sm: toRem(4);       /* 4px */\r\n$rounded-md: toRem(8);       /* 8px */\r\n$rounded-lg: toRem(16);      /* 16px */\r\n$rounded-full: toRem(9999);  /* valor fixo circular */",
+      "lines": 4,
+      "isText": true
+    },
+    {
+      "path": "src\\types\\EnvProps.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\types\\EnvProps.ts",
+      "name": "EnvProps.ts",
+      "extension": ".ts",
+      "size": 47,
+      "created": "2025-12-04T12:18:33.041Z",
+      "modified": "2025-12-04T12:18:52.848Z",
+      "content": "export interface EnvProps {\r\n    api: string\r\n}",
+      "lines": 3,
+      "isText": true
+    },
+    {
+      "path": "src\\types\\UseDateProps.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\types\\UseDateProps.ts",
+      "name": "UseDateProps.ts",
+      "extension": ".ts",
+      "size": 131,
+      "created": "2025-12-04T17:47:10.738Z",
+      "modified": "2025-12-05T12:49:38.857Z",
+      "content": "export interface UseDateProps {\r\n    date?: Date,\r\n    locale?: Intl.LocalesArgument, \r\n    payload?: Intl.DateTimeFormatOptions\r\n}",
+      "lines": 5,
+      "isText": true
+    },
+    {
+      "path": "src\\types\\UseDomProps.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\types\\UseDomProps.ts",
+      "name": "UseDomProps.ts",
+      "extension": ".ts",
+      "size": 418,
+      "created": "2025-12-04T13:29:20.217Z",
+      "modified": "2025-12-04T14:46:16.628Z",
+      "content": "type EventMap = {\r\n    [K in keyof HTMLElementEventMap]?: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any;\r\n};\r\n\r\nexport interface UseDomProps<T extends HTMLElement> {\r\n    current: T | null,\r\n    set: (selector: string | T) => void,\r\n    on: <K extends keyof HTMLElementEventMap>(type: K, handler: EventMap[K]) => void;\r\n    off: <K extends keyof HTMLElementEventMap>(type: K, handler: EventMap[K]) => void;\r\n}",
+      "lines": 10,
+      "isText": true
+    },
+    {
+      "path": "src\\types\\UseFetchProps.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\types\\UseFetchProps.ts",
+      "name": "UseFetchProps.ts",
+      "extension": ".ts",
+      "size": 345,
+      "created": "2025-12-04T12:19:04.777Z",
+      "modified": "2025-12-04T13:10:18.076Z",
+      "content": "export interface UserFetchProps {\r\n    endpoint: string,\r\n    method?: \"GET\" | \"POST\" | \"PUT\" | \"PATCH\" | \"DELETE\",\r\n    headers?: any,\r\n    body?: any\r\n}\r\n\r\nexport interface UserFetchResponseProps<T> {\r\n    data: T | null,\r\n    error: any\r\n}\r\n\r\nexport interface CacheItem<T> {\r\n    result: UserFetchResponseProps<T>;\r\n    timestamp: number;\r\n};",
+      "lines": 16,
+      "isText": true
+    },
+    {
+      "path": "src\\types\\UseRouterProps.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\types\\UseRouterProps.ts",
+      "name": "UseRouterProps.ts",
+      "extension": ".ts",
+      "size": 51,
+      "created": "2025-12-04T13:54:33.041Z",
+      "modified": "2025-12-04T13:54:40.461Z",
+      "content": "export type RouteListener = (path: string) => void;",
+      "lines": 1,
+      "isText": true
+    },
+    {
+      "path": "src\\types\\UseValidateProps.ts",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\types\\UseValidateProps.ts",
+      "name": "UseValidateProps.ts",
+      "extension": ".ts",
+      "size": 381,
+      "created": "2025-12-04T14:24:40.382Z",
+      "modified": "2025-12-04T17:07:17.895Z",
+      "content": "export type ErrorsProps = {\r\n    field: string,\r\n    message: string\r\n}\r\n\r\nexport interface ValidateProps {\r\n    classError?: string,\r\n    classValid?: string,\r\n    callback?: (arg: any) => void\r\n}\r\n\r\nexport interface ValidateReturnProps {\r\n    valid: boolean,\r\n    errors: ErrorsProps[]\r\n}\r\n\r\nexport type InputsProps = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;\r\n",
+      "lines": 18,
+      "isText": true
+    },
+    {
+      "path": "tsconfig.json",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\tsconfig.json",
+      "name": "tsconfig.json",
+      "extension": ".json",
+      "size": 1282,
+      "created": "2025-12-04T11:45:46.353Z",
+      "modified": "2025-12-05T12:51:06.202Z",
+      "content": "{\r\n  // Visit https://aka.ms/tsconfig to read more about this file\r\n  \"compilerOptions\": {\r\n    // File Layout\r\n    \"rootDir\": \"./src\",\r\n    \"outDir\": \"./dist\",\r\n\r\n    // Environment Settings\r\n    // See also https://aka.ms/tsconfig/module\r\n    \"module\": \"esnext\",\r\n    \"target\": \"esnext\",\r\n    \"types\": [],\r\n    // For nodejs:\r\n    // \"lib\": [\"ES2020\", \"DOM\"],\r\n    // \"types\": [\"node\"],\r\n    // and npm install -D @types/node\r\n\r\n    // Other Outputs\r\n    // \"sourceMap\": true,\r\n    // \"declaration\": true,\r\n    // \"declarationMap\": true,\r\n\r\n    // Stricter Typechecking Options\r\n    \"noUncheckedIndexedAccess\": true,\r\n    \"exactOptionalPropertyTypes\": true,\r\n\r\n    // Style Options\r\n    // \"noImplicitReturns\": true,\r\n    // \"noImplicitOverride\": true,\r\n    // \"noUnusedLocals\": true,\r\n    // \"noUnusedParameters\": true,\r\n    // \"noFallthroughCasesInSwitch\": true,\r\n    // \"noPropertyAccessFromIndexSignature\": true,\r\n\r\n    // Recommended Options\r\n    \"strict\": true,\r\n    // \"jsx\": \"react-jsx\",\r\n    \"verbatimModuleSyntax\": true,\r\n    \"isolatedModules\": true,\r\n    \"noUncheckedSideEffectImports\": true,\r\n    \"moduleDetection\": \"force\",\r\n    \"skipLibCheck\": true,\r\n    \"moduleResolution\": \"bundler\",\r\n    \"baseUrl\": \"./\",\r\n    \"paths\": {\r\n      \"@/*\": [\"./src/*\"]\r\n    }\r\n  }\r\n}\r\n",
+      "lines": 50,
+      "isText": true
+    },
+    {
+      "path": "tsup.config.js",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\tsup.config.js",
+      "name": "tsup.config.js",
+      "extension": ".js",
+      "size": 228,
+      "created": "2025-12-04T11:38:21.715Z",
+      "modified": "2025-12-05T12:38:59.329Z",
+      "content": "import { defineConfig } from 'tsup'\r\n\r\nexport default defineConfig({\r\n  entry: ['src/main.ts'],\r\n  outDir: './dist/js',\r\n  platform: 'browser',\r\n  format: ['iife'],\r\n  splitting: false,\r\n  sourcemap: false,\r\n  clean: false,\r\n});",
+      "lines": 11,
+      "isText": true
+    }
+  ],
+  "directories": [
+    {
+      "path": "src",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src",
+      "name": "src"
+    },
+    {
+      "path": "src\\constants",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\constants",
+      "name": "constants"
+    },
+    {
+      "path": "src\\helpers",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\helpers",
+      "name": "helpers"
+    },
+    {
+      "path": "src\\hooks",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\hooks",
+      "name": "hooks"
+    },
+    {
+      "path": "src\\mock",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\mock",
+      "name": "mock"
+    },
+    {
+      "path": "src\\styles",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles",
+      "name": "styles"
+    },
+    {
+      "path": "src\\styles\\components",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\components",
+      "name": "components"
+    },
+    {
+      "path": "src\\styles\\functions",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\functions",
+      "name": "functions"
+    },
+    {
+      "path": "src\\styles\\global",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\global",
+      "name": "global"
+    },
+    {
+      "path": "src\\styles\\variables",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\styles\\variables",
+      "name": "variables"
+    },
+    {
+      "path": "src\\types",
+      "absolutePath": "c:\\Users\\lucas.bezerra\\Documents\\projects\\helperTS\\src\\types",
+      "name": "types"
+    }
+  ],
+  "summary": {
+    "totalFiles": 35,
+    "totalDirectories": 11,
+    "totalSize": 19036,
+    "fileTypes": {
+      "no-extension": 1,
+      ".html": 1,
+      ".json": 2,
+      ".js": 3,
+      ".ts": 17,
+      ".css": 11
+    }
+  }
+}
