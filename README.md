@@ -920,4 +920,4 @@ Se este projeto foi útil para você, considere dar uma ⭐ no repositório!
 
 **Versão**: 1.0.0
 
-**Última atualização**: Dezembro 2024
+**Última atualização**: Dezembro 2025
